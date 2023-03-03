@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/furniture/static/css/main.2b84c5c5.css",
+    "main.js": "/furniture/static/js/main.80e966c1.js",
+    "static/media/logo.svg": "/furniture/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/furniture/index.html",
+    "main.2b84c5c5.css.map": "/furniture/static/css/main.2b84c5c5.css.map",
+    "main.80e966c1.js.map": "/furniture/static/js/main.80e966c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b84c5c5.css",
+    "static/js/main.80e966c1.js"
+  ]
+}
