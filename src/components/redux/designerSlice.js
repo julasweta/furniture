@@ -25,5 +25,6 @@ const designerSlice = createSlice({
 
 export const {
   setItemDesigner,
+  setDesigner
 } = designerSlice.actions;
 export default designerSlice.reducer;

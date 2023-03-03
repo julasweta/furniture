@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const menu = [
-  { name: "HOME", link: "*", id:1 },
-  { name: "ФУРНІТУРИ", link: "furniture",id:2  },
-  { name: "ДИЗАЙНЕРИ", link: "designer",id:3  },
-  { name: "ПОСТАЧАЛЬНИКИ", link: "slider",id:4  },
+  { name: "HOME", link: "*", id: 1 },
+  { name: "ФУРНІТУРИ", link: "furniture", id: 2 },
+  { name: "ДИЗАЙНЕРИ", link: "designer", id: 3 },
+  { name: "ПОСТАЧАЛЬНИКИ", link: "slider", id: 4 },
 ];
 
 function Header() {
@@ -18,14 +18,14 @@ function Header() {
   };
 
   const hash = window.location.hash.substring(1); // отримуємо рядок без символу '#'
-  const parts = hash.split('/'); // розділяємо рядок на частини за допомогою '/'
+  const parts = hash.split("/"); // розділяємо рядок на частини за допомогою '/'
   const category = parts[1]; // отримуємо категорію меблів
   const itemType = parts[2]; // отримуємо тип меблів
   const itemName = parts[3]; // отримуємо назву меблів
 
-  useEffect(()=>{
+  useEffect(() => {
     setLink(category);
-  }, []);
+  }, [hash]);
 
   return (
     <div className="header">
@@ -33,11 +33,12 @@ function Header() {
         <div className="container-fluid">
           {menu.map((item) => (
             <Link
-            
-            key={item.id}
+              key={item.id}
               to={`/${item.link}`}
               className={
-                linkActive === item.link ? "navbar-brand active" : "navbar-brand"
+                linkActive === item.link
+                  ? "navbar-brand active"
+                  : "navbar-brand"
               }
               onClick={() => onActive(item.link)}
             >

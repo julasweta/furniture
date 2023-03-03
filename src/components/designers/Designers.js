@@ -21,6 +21,7 @@ function Designers() {
       .eachPage(
         function page(disegners, fetchNextPage) {
             setDisegners(disegners);
+            localStorage.setItem("designersLocal", JSON.stringify(disegners));
           fetchNextPage();
         },
         function done(err) {

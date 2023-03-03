@@ -73,7 +73,7 @@ function App() {
             element={<SingleFurniture item={itemFurniture}  />}
           />
           <Route path="/designer" element={<Designers />} />
-          <Route path="/designer/card/:id" element={<SingleDesigners />} />
+          <Route path="/:designer/:card/:id" element={<SingleDesigners />} />
           <Route path="/slider" element={<Slider />} />
         </Routes>
       </HashRouter>

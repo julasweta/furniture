@@ -4,11 +4,13 @@
 top: 0;  
 z-index: 100;  
 width: 100%; 
+
+.active{color:red;}
 }
 .form-control{
     width: 150px;
 }
 
 .navbar-brand:hover{
-color: rgb(224, 39, 39);
+color: rgb(73, 11, 219);
 }
