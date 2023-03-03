@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import validator from "validator";
 
 function Form({showModal, setShowModal}) {
   const [formData, setFormData] = useState({
@@ -9,13 +10,32 @@ function Form({showModal, setShowModal}) {
   });
 
 const sendForm = () => {
-console.log(formData);
+        // перевіряємо, чи всі поля заповнені
+        if (!formData.name || !formData.email || !formData.phone) {
+          alert("Будь ласка, заповніть всі поля форми");
+          return;
+        }
+    
+        // перевіряємо, чи введений коректний номер телефону в Україні
+        if (!validator.isMobilePhone(formData.phone, "uk-UA")) {
+          alert("Будь ласка, введіть коректний номер телефону в форматі (XXX)XXX-XX-XX");
+          return;
+        }
+    
+        // перевіряємо, чи введена коректна поштова адреса
+        if (!validator.isEmail(formData.email)) {
+          alert("Будь ласка, введіть коректну поштову адресу");
+          return;
+        }
+    
+        // відправляємо форму
+        console.log("Form data:", formData);
+    alert('Дякуємо за замовлення');
     setFormData(  {
       name: '',
       email: '',
       phone: ''
     });
-    alert('Дякуємо за замовлення');
     showModal === "none"? setShowModal('flex'): setShowModal('none');
 };
 
