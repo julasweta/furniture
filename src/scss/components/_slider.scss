@@ -1,0 +1,41 @@
+.carousel {
+  padding-top: 120px;
+
+  &-name {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    background-color: red;
+    opacity: 1;
+    padding: 10px;
+    border-radius: 20px;
+    animation: slider-name 3s infinite;
+    color: white;
+  }
+  &-img {
+    display: flex;
+    justify-content: center;
+  }
+  
+  @keyframes slider-name {
+    from{opacity: 0; color:red }
+   to{opacity: 1;}
+  }
+ &-control-next-icon, &-control-prev-icon{
+    background-color: rgb(172, 22, 22);
+    background-size: 60px;
+    border-radius: 50%;
+    padding: 30px;
+ }
+ &-indicators [data-bs-target]{
+   height: 10px;
+ }
+
+  img {
+    object-fit: cover;
+    width: 90%;
+    height: 70vh;
+  }
+}
+

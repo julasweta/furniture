@@ -1,0 +1,66 @@
+.home {
+  padding-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .card {
+    border: thick double #32a1ce;
+    width: 45%;
+    height: 580px;
+    margin-top: 10px;
+
+    &-box_color{
+      display: flex;
+    }
+    &-body{
+      display: flex;
+      flex-direction: column;
+    }
+    .img-fluid {
+      object-fit: cover;
+      margin-top: 20px;
+      width: 80%;
+      height: 300px;
+      align-self: center;
+      box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.75);
+      
+    }
+    &:hover {
+      border: thick double #0eea41;
+    }
+    .card-text_color {
+      background-color: rgb(196, 201, 205);
+      width: fit-content;
+      padding: 5px;
+      margin: 3px;
+      border-radius: 40%;
+      display: inline;
+    }
+    &-type {
+      width: fit-content;
+      display: inline;
+      background-color: rgb(179, 235, 216);
+      padding: 5px;
+      margin-left: 25px;
+      border: 2px solid gray;
+      border-radius: 10%;
+      box-shadow:  1px 2px 10px -4px #132caa;
+    }
+
+    &-cost {
+      
+      width: fit-content;
+      display: inline;
+      background-color: rgb(248, 247, 254);
+      padding: 5px;
+      margin-left: 25px;
+      border: 2px solid rgb(220, 213, 213);
+      border-radius: 30%;
+      box-shadow:  1px 2px 10px -4px #132caa;
+    }
+  }
+  .btn{
+    align-self: center;
+    width: fit-content;
+  }
+}

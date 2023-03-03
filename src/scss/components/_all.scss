@@ -1,0 +1,21 @@
+@import './header.scss';
+@import './furniture.scss';
+@import './home.scss';
+@import './slider.scss';
+@import './modal.scss';
+@import './designer.scss';
+
+body{
+    background-color: rgb(200, 205, 206);
+    display: flex;
+    justify-content: center;
+}
+*{
+    text-decoration: none;
+    list-style-type: none;
+    transition: all 1s;
+}
+#root{
+    width: 100%;
+}
+.active{color:red}
